@@ -4,6 +4,8 @@ function success(pos) {
 
   const url = `/.netlify/functions/weatherapi?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&units=metric`;
 
+  console.log('url :>> ', url);
+
   fetch(url)
     .then((response) => {
       return response.json();
